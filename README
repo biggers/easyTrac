@@ -8,6 +8,7 @@ Feedback/bugs to:
  * Email: manuel.viera.tirado at gmail.com
  * Twitter: http://twitter.com/mviera
 
+
 Installation instructions
 =========================
 The installer will compile Nginx and uWSGI and it will install all required python dependencies also.
@@ -25,7 +26,7 @@ libzzip-dev
 libapr1-dev
 libaprutil1-dev
 
-PLEASE NOTE: You have the option to run the installation as root or a normal user.
+PLEASE NOTE: You can run the easyTrac installation as root or as a normal user.
 
 The installer config works out of the box, but if you want, you can edit buildout.cfg and 
 modify the following parameters:
@@ -86,6 +87,7 @@ http://localhost:9000
 NOTE: by default, the username is 'admin' and the password is 'admin.' To change the admin password, 
 edit the [supervisor] part in buildout.cfg and run bin/buildout.
 
+
 Uninstall instructions
 ======================
 1) Stop supervisord by running: ./bin/supervisorctl shutdown
@@ -99,4 +101,13 @@ execute the following command:
 
 $ ./bin/backup
 
-and the backup will be stored into the backups directory, called 'backups'.
+and all the trac projects will be backed up into a tarball to the backups directory, called 'backups'.
+
+
+Restore instructions
+====================
+Also, easyTrac provides a restore script, useful to restore old backups. Its usage is as simple as follow:
+
+$ ./bin/restore backups/backup-file.tar.gz
+
+and all the trac projects will be restored.
