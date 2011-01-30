@@ -10,9 +10,9 @@
 	<style type="text/css">
 		body {
   		margin-top: 1.0em;
-  		background-color: #806b43;
-		  font-family: "Helvetica,Arial,FreeSans";
-  		color: #ffffff;
+  		background-color: #F0F0F0;
+		font-family: "Helvetica,Arial,FreeSans";
+  		color: #000000;
     }
     #container {
       margin: 0 auto;
@@ -26,7 +26,7 @@
     a { color: #7f94bc; }
     .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
     .download { float: right; }
-		pre { background: #000; color: #fff; padding: 15px;}
+    pre { background: #f9f9f9; color: #000; padding: 15px; border-left: 5px solid #ccc;}
     hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
     .footer { text-align:center; padding-top:30px; font-style: italic; }
 	</style>
@@ -53,53 +53,55 @@
     </div>
 
     <p>The easyTrac installer is a source-installation kit that installs a complete Trac environment and all its dependecies.</p><h2>Dependencies</h2>
-<p>libpcre3-dev
-libssl-dev 
+<pre>
+libpcre3-dev
+libssl-dev
 libxml2-dev
 libxslt-dev
 libsqlite3-dev
 libzzip-dev
 libapr1-dev
-libaprutil1-dev</p>
+libaprutil1-dev
+</pre>
 <h2>Install</h2>
-<p>The installer config works out of the box, but if you want, you can edit buildout.cfg and 
-modify the following parameters:
+<p>The installer config works out of the box, but if you want, you can edit buildout.cfg and<br/>
+modify the following parameters:<br/>
+<br/>
+ * <strong>nginx-http-port</strong>: http port that will be used for Nginx.<br/>
+ * <strong>nginx-https-port</strong>: https port that will be used for Nginx (in case you want to use https).<br/>
+ * <strong>supervisor-http-port</strong>: http port that will be used for supervisor.<br/>
+ * <strong>host</strong>: host ip address of fqdn.<br/>
+ * <strong>socket-directory</strong>: directory where the socket will be stored.<br/>
+ * <strong>pid-directory</strong>: directory where the pid files will be stored.<br/>
+ * <strong>log-directory</strong>: logs directory.<br/>
+ * <strong>trac-projects-directory</strong>: directory where the Trac projects will be created.<br/>
+ * <strong>svn-repository-directory</strong>: directory where the svn repositories will be created.<br/>
+<br/>
+Once you have installed all required dependencies, you can continue with the installation process.<br/>
+So you execute the following command:<br/>
+<br/>
+<pre>$ python bootstrap.py</pre><br/>
+<br/>
 
- * nginx-http-port: http port that will be used for Nginx.
- * nginx-https-port: https port that will be used for Nginx (in case you want to use https).
- * supervisor-http-port: http port that will be used for supervisor.
- * host: host ip address of fqdn.
- * socket-directory: directory where the socket will be stored.
- * pid-directory: directory where the pid files will be stored.
- * log-directory: logs directory.
- * trac-projects-directory: directory where the Trac projects will be created.
- * svn-repository-directory: directory where the svn repositories will be created.
-
-Once you have installed all required dependencies, you can continue with the installation process.
-So you execute the following command:
-
-$ python bootstrap.py
-
-
-You should have the buildout environment ready to go. Now, you must execute the buildout installation:
-
-$ ./bin/buildout
+You should have the buildout environment ready to go. Now, you must execute the buildout installation:<br/>
+<br/>
+<pre>$ ./bin/buildout<br/></pre>
 </p>
 <h2>License</h2>
-<p># Copyright (C) 2011 Manuel Viera <manuel.viera.tirado@gmail.com>
-#
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+<p>Copyright (C) 2011 Manuel Viera <manuel.viera.tirado@gmail.com><br/>
+<br/>
+ This program is free software: you can redistribute it and/or modify<br/>
+ it under the terms of the GNU General Public License as published by<br/>
+ the Free Software Foundation, either version 3 of the License, or<br/>
+ (at your option) any later version.<br/>
+<br/>
+ This program is distributed in the hope that it will be useful,<br/>
+ but WITHOUT ANY WARRANTY; without even the implied warranty of<br/>
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the<br/>
+ GNU General Public License for more details.<br/>
+<br/>
+ You should have received a copy of the GNU General Public License<br/>
+ along with this program.  If not, see <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>.<br/>
 </p>
 <h2>Authors</h2>
 <p>mviera (manuel.viera.tirado@gmail.com)<br/><br/>      </p>
