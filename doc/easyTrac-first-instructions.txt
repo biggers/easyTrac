@@ -1,0 +1,32 @@
+
+
+
+Thanks for install easyTrac!
+
+Now you have a complete Trac environment ready-to-go on your machine :-)
+
+easyTrac provides a complete deployment using a Nginx web server and uWSGI.
+So, to get them running you will need to execute the following command:
+
+$ ./bin/supervisord
+
+and you will have a Nginx running (on 8080 port, by default) and a supervisor 
+instance too (on 9000 port, by default).
+
+How to create a trac project
+============================
+$ ./bin/trac-admin opt/trac/demo initenv demo sqlite:db/trac.db
+
+How to create a svn repository
+==============================
+$ ./bin/svnadmin create opt/svn/demo
+
+
+Congratulations! Now you can access to your Trac project at:
+
+http://localhost:8080
+
+Enjoy it!
+
+---
+Feedback/bugs to: manuel.viera.tirado at gmail.com
