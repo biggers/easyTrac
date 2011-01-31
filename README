@@ -38,8 +38,8 @@ modify the following parameters:
  * socket-directory: directory where the socket will be stored.
  * pid-directory: directory where the pid files will be stored.
  * log-directory: logs directory.
- * trac-projects-directory: directory where the Trac projects will be created.
- * svn-repository-directory: directory where the svn repositories will be created.
+ * trac-projects-directory: directory where the Trac projects will be created. This directory is <installdir>/opt/trac/, by default.
+ * svn-repository-directory: directory where the svn repositories will be created. This directory is <installdir>/opt/svn/, by default.
 
 Once you have installed all required dependencies, you can continue with the installation process.
 So you execute the following command:
@@ -89,6 +89,16 @@ http://localhost:9000
 
 NOTE: by default, the username is 'admin' and the password is 'admin.' To change the admin password, 
 edit the [supervisor] part in buildout.cfg and run bin/buildout.
+
+
+How to create a Trac project
+============================
+$ ./bin/trac-admin opt/trac/demo initenv demo sqlite:db/trac.db
+
+
+How to create a svn code repository
+===================================
+$ ./bin/svnadmin create opt/svn/demo
 
 
 Uninstall instructions
