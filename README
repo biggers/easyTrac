@@ -52,6 +52,9 @@ You should have the buildout environment ready to go. Now, you must execute the 
 $ ./bin/buildout
 
 
+NOTE: Also, easyTrac compiles Subversion and installs the subversion bindings needed for Trac to manage and browse through svn code repositories.
+
+
 How to start, stop, restart services
 ====================================
 Supervisor provides a control script to start, stop or restart our 
