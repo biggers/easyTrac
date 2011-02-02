@@ -3,7 +3,7 @@ setup(
     name='trac_launcher',
     version='0.1',
     url='http://github.com/mviera/easyTrac',
-    license='GPL',
+    license='LGPLv3',
     description='Trac tool for running it through zc.buildout',
     author='Manuel Viera <manuel.viera.tirado@gmail.es>',
     classifiers=[
