@@ -79,7 +79,7 @@ $ ./bin/supervisorctl restart nginx
 Also, supervisor provides an especial word 'all', so we don't need to specify 
 every service name. For example, if we need to restart all services:
 
-$ ./bin/supervisorct restart all
+$ ./bin/supervisorctl restart all
 
 
 Supervisor has an admin panel on where we can control our services via web. This admin control 
