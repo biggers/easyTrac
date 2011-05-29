@@ -17,6 +17,10 @@ are the following:
 
 Dependencies
 ------------
+git
+python-dev
+gcc
+make
 libpcre3-dev
 libssl-dev 
 libxml2-dev
