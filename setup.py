@@ -15,6 +15,6 @@ setup(
     ],
     py_modules=['trac_launcher'],
     install_requires=[
-        'distribute==0.6.14',
+        'distribute>=0.6.14',
     ],
 )
